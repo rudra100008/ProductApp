@@ -7,19 +7,19 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>ProductAPP Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
   
-     <dependency>
+  <dependencies>
+    <dependency>
     <groupId>jakarta.servlet.jsp.jstl</groupId>
     <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
     <version>3.0.0</version>
-</dependency>
-  
-<dependency>
+  </dependency>
+  <dependency>
     <groupId>org.glassfish.web</groupId>
     <artifactId>jakarta.servlet.jsp.jstl</artifactId>
     <version>3.0.1</version>
-</dependency>
+   </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

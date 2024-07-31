@@ -17,12 +17,10 @@
     <div class="carousel-container">
         <div class="carousel">
             <!-- Use c:forEach to iterate over a collection of products -->
-            <c:forEach var="product" items="${productsList}">
+            <c:forEach var="product" items="${products}">
                 <div class="card">
                     <div class="image">
-                        <!-- Display the product image -->
-                        <c:url value="/resources/images/${product.fileName}" var="imagePath" />
-                        <img alt="${product.name}" src="${imagePath}" width="200"/>
+                        <img alt="ProductImage" src="<c:url value="/resources/images/${image}" />" width="200"/>
                     </div>
                     <div class="content">
                         <!-- Display the product name and description -->
@@ -35,7 +33,7 @@
             </c:forEach>
 
             <!-- Fallback card if no products are available -->
-            <c:if test="${empty productsList}">
+            <c:if test="${empty products}">
                 <div class="card">
                     <div class="image">
                         <img src="" alt="No Products Available">

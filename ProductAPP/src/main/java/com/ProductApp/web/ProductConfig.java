@@ -58,7 +58,7 @@ public class ProductConfig implements  WebMvcConfigurer{
 	    public LocalSessionFactoryBean sessionFactory() {
 	        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 	        sessionFactory.setDataSource(dataSource());
-	        sessionFactory.setPackagesToScan("com.ProductApp.model.Product"); // Package where entities are located
+	        sessionFactory.setPackagesToScan("com.ProductApp.model"); // Package where entities are located
 	        sessionFactory.setHibernateProperties(hibernateProperties());
 	        return sessionFactory;
 	    }

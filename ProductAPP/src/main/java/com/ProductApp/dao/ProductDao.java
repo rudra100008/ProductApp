@@ -1,10 +1,13 @@
 package com.ProductApp.dao;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
+
 import com.ProductApp.model.Product;
 import jakarta.transaction.Transactional;
 
@@ -15,9 +18,10 @@ public class ProductDao {
     private HibernateTemplate hibernateTemplate;
 	//create product
 	@Transactional
-	public void createProduct(Product product) {
-		hibernateTemplate.save(product);
-	}
+	public void createProduct(Product product ) throws IOException {
+        
+        hibernateTemplate.save(product);
+    }
 	
 	// get all product
 	public List<Product> getAllProduct(){

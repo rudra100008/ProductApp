@@ -11,7 +11,7 @@
     <h2>Product Successfully Added!</h2>
   <h4>${message}</h4>
     <!-- Display uploaded image -->
-    <c:url value="/resources/images/${fileName}" var="imagePath" />
+        <c:url value="/resources/images/${fileName}" var="imagePath" />
     <img alt="Uploaded Product Image" src="${imagePath}" width="200"/>
 
     <!-- Display additional details if needed -->

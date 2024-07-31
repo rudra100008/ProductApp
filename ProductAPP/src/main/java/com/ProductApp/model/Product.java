@@ -1,29 +1,33 @@
 package com.ProductApp.model;
 
-import org.springframework.web.multipart.MultipartFile;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "Product_Details")
 public class Product {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@Column(name = "Product_Name")
 	private String name;
-   private MultipartFile image;
+	@Column(name = "Product_Description")
 	private String description;
+	@Column(name = "Product_Price")
 	private long price;
+
 	public Product() {
 		super();
 	}
-	public Product(int id, String name,MultipartFile image, String description, long price) {
+	public Product(int id, String name, String description, long price) {
 		super();
 		this.id = id;
 		this.name = name;
-    	this.image=image;
+    
 		this.description = description;
 		this.price = price;
 	}
@@ -39,14 +43,6 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
-	public MultipartFile getImage() {
-		return image;
-	}
-	public void setImage(MultipartFile image) {
-		this.image = image;
-	}
 	public String getDescription() {
 		return description;
 	}
@@ -61,7 +57,7 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", image=" + image + ", description=" + description + ", price="
+		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", price="
 				+ price + "]";
 	}
 

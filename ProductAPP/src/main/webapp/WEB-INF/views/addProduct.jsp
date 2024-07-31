@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
-  <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>      
+  <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,15 +33,15 @@
             <h2>Add new product</h2>
             <form:form method="post" action="sucess" modelAttribute="products" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="product-title">Product Title</label>
+                    <label for="name">Product Title</label>
                     <input type="text" id="product-title" name="name" placeholder="Enter product title">
                 </div>
                 <div class="form-group">
                    <label for="image">Photo of Product</label>
-                   <input type="file" id="image" name="image">
+                   <input type="file" id="image" name="image" required>
                 </div>
                 <div class="form-group">
-                    <label for="product-description">Product description</label>
+                    <label for="description">Product description</label>
                     <div class="rich-text-editor">
                         <div class="editor-toolbar">
                             <select>
@@ -66,8 +66,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="product-price"> Product Price</label>
-                    <input type="text" id="product-price" name="price" placeholder="Enter product price">
+                    <label for="price"> Product Price</label>
+                    <input type="number" id="product-price" name="price" placeholder="Enter product price">
                 </div>
 
                 
