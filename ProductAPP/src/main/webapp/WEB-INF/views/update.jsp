@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@page isELIgnored="false" %>
   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
   <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>    
 <!DOCTYPE html>
@@ -31,28 +32,32 @@
         </header>
 
         <div class="add-product-form">
-            <h2>Add new product</h2>
-            <form:form method="post" action="sucess" modelAttribute="products" enctype="multipart/form-data">
+            <h2>Change Product Details</h2>
+            <form:form method="post" action="${pageContext.request.contextPath}/sucess" modelAttribute="products" enctype="multipart/form-data">
+               <div class="form-group">
+                    <input type="hidden" id="product-title" name="id" placeholder="Enter product id" value="${product.id}" >
+                </div>
                 <div class="form-group">
                     <label for="name">Product Title</label>
-                    <input type="text" id="product-title" name="name" placeholder="Enter product title">
+                    <input type="text" id="product-title" name="name" placeholder="Enter product title" value="${product.name}" >
                 </div>
                 
                 <div class="form-group">
                     <label for="description">Product description</label>
                     <div class="rich-text-editor">
-                        <textarea id="product-description" name="description" placeholder="Enter product description"></textarea>
+                        <textarea id="product-description" name="description"placeholder="Enter product description">${product.description} 
+                        </textarea>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="price"> Product Price</label>
-                    <input type="number" id="product-price" name="price" placeholder="Enter product price">
+                    <input type="number" id="product-price" name="price" value="${product.price}" placeholder="Enter product price">
                 </div>
 
                 
                  <div class="form-group">
-                    <button type="submit" class="submit-btn">Add Product</button>
+                    <button type="submit" class="submit-btn">Change Product</button>
                 </div>
             </form:form>
         </div>

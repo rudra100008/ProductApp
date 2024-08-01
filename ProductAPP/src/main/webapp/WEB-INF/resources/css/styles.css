@@ -87,6 +87,7 @@
         }
 
         .form-group input[type="text"],
+        .form-group input[type="number"],
         .form-group textarea,
         .form-group input[type="file"] {
             width: 100%;

@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
     <link rel="stylesheet" href="<c:url value='/resources/css/productDesc.css'/>" />
-    <script type="text/javascript" src='<c:url value="/resources/js/productDesc.js"></c:url>'></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -54,6 +53,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+  <script type="text/javascript" src='<c:url value="/resources/js/productDesc.js"></c:url>'></script>
 </body>
 </html>
