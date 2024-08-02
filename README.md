@@ -23,12 +23,12 @@ ProductAPP is a Spring MVC-based web application designed to manage products. It
 
 ### Home Page
 
-![Home Page](screenshots/home.png)
+![Home Page](screenshots/home.PNG)
 
 ### Add Product Page
 
-![Add Product Page](screenshots/addproduct.png)
+![Add Product Page](screenshots/addproduct.PNG)
 
 ### Product List
 
-![Product List](screenshots/update.png)
+![Product List](screenshots/update.PNG)
