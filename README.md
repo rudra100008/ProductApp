@@ -1,6 +1,6 @@
 # ProductAPP
 
-ProductAPP is a Spring MVC-based web application designed to manage products. It supports operations like creating, reading, updating, and deleting (CRUD) product information, including product name, product ID, product description, and price. The application also allows users to upload images for each product.
+ProductAPP is a Spring MVC-based web application designed to manage products. It supports operations like creating, reading, updating, and deleting (CRUD) product information, including product name, product ID, product description, and price. 
 
 ## Features
 
@@ -29,6 +29,6 @@ ProductAPP is a Spring MVC-based web application designed to manage products. It
 
 ![Add Product Page](screenshots/addproduct.PNG)
 
-### Product List
+### Update Product Page
 
 ![Product List](screenshots/update.PNG)
